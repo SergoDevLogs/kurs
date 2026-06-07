@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <system>
+        <route match="" controller="AuthController" action="loginForm" />
+        <route match="not_found" controller="AuthController" action="loginForm" />
+    </system>
+    <routes>
+        <!-- Auth -->
+        <route match="login" controller="AuthController" action="loginForm" method="GET" />
+        <route match="login" controller="AuthController" action="login" method="POST" />
+        <route match="logout" controller="AuthController" action="logout" method="GET" />
+        <route match="register" controller="AuthController" action="registerForm" method="GET" />
+        <route match="register" controller="AuthController" action="register" method="POST" />
+        
+        <!-- Cashier -->
+        <route match="cashier" controller="CashierController" action="index" method="GET" />
+        <route match="cashier/sales" controller="CashierController" action="salesReport" method="GET" />
+        <route match="cashier/export-sales-excel" controller="CashierController" action="exportSalesExcel" method="GET" />
+        <route match="cashier/export-sales-csv" controller="CashierController" action="exportSalesCsv" method="GET" />
+        
+        <!-- Warehouse -->
+        <route match="warehouse" controller="WarehouseController" action="index" method="GET" />
+        <route match="warehouse/supplies" controller="WarehouseController" action="supplies" method="GET" />
+        <route match="warehouse/update-status" controller="WarehouseController" action="updateStatus" method="POST" />
+        
+        <!-- Merchandiser -->
+        <route match="merchandiser" controller="MerchandiserController" action="index" method="GET" />
+        <route match="merchandiser/supplies" controller="MerchandiserController" action="supplies" method="GET" />
+        <route match="merchandiser/create-supply" controller="MerchandiserController" action="createSupplyForm" method="GET" />
+        <route match="merchandiser/create-supply" controller="MerchandiserController" action="createSupply" method="POST" />
+        <route match="merchandiser/update-supply-status" controller="MerchandiserController" action="updateSupplyStatus" method="POST" />
+        <route match="merchandiser/transportations" controller="MerchandiserController" action="transportations" method="GET" />
+        <route match="merchandiser/create-transportation" controller="MerchandiserController" action="createTransportation" method="POST" />
+        <route match="merchandiser/efficiency" controller="MerchandiserController" action="efficiencyReport" method="GET" />
+        <route match="merchandiser/export-efficiency-excel" controller="MerchandiserController" action="exportEfficiencyExcel" method="GET" />
+        <route match="merchandiser/export-efficiency-csv" controller="MerchandiserController" action="exportEfficiencyCsv" method="GET" />
+        
+        <!-- Admin -->
+        <route match="admin" controller="AdminController" action="dashboard" method="GET" />
+        <route match="admin/stocks" controller="AdminController" action="stocks" method="GET" />
+        <route match="admin/supplies" controller="AdminController" action="supplies" method="GET" />
+        <route match="admin/export-supplies-excel" controller="AdminController" action="exportSuppliesExcel" method="GET" />
+        <route match="admin/export-supplies-csv" controller="AdminController" action="exportSuppliesCsv" method="GET" />
+        <route match="admin/transportations" controller="AdminController" action="transportations" method="GET" />
+        <route match="admin/export-transportations-excel" controller="AdminController" action="exportTransportationsExcel" method="GET" />
+        <route match="admin/export-transportations-csv" controller="AdminController" action="exportTransportationsCsv" method="GET" />
+        <route match="admin/efficiency" controller="AdminController" action="efficiencyReport" method="GET" />
+        <route match="admin/export-efficiency-excel" controller="AdminController" action="exportEfficiencyExcel" method="GET" />
+        <route match="admin/export-efficiency-csv" controller="AdminController" action="exportEfficiencyCsv" method="GET" />
+        <route match="admin/users" controller="AuthController" action="listUsers" method="GET" />
+        <route match="admin/delete-user" controller="AuthController" action="deleteUser" method="POST" />
+        <route match="admin/create-transportation" controller="AdminController" action="createTransportation" method="POST" />
+    </routes>
+</root>
